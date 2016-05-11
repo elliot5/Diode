@@ -1,11 +1,8 @@
-﻿using Microsoft.Xna.Framework;
+﻿
+using DiodeDesktop.src.render;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DiodeDesktop
 {
@@ -13,6 +10,7 @@ namespace DiodeDesktop
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        RenderManager renderManager;
 
         public DiodeCore()
         {
@@ -22,6 +20,7 @@ namespace DiodeDesktop
 
         protected override void Initialize()
         {
+            renderManager = new RenderManager();
             base.Initialize();
         }
 
@@ -34,7 +33,7 @@ namespace DiodeDesktop
 
         protected override void UnloadContent()
         {
-         
+
         }
 
 
@@ -48,8 +47,6 @@ namespace DiodeDesktop
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-
             base.Draw(gameTime);
         }
     }

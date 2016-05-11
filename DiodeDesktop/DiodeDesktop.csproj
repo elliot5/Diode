@@ -59,9 +59,17 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DiodeCore.cs" />
-    <Compile Include="DiodeBootProgram.cs" />
+    <Compile Include="Install\DiodeInstall.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Install\DiodeInstall.Designer.cs">
+      <DependentUpon>DiodeInstall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\render\BlueprintCamera.cs" />
+    <Compile Include="src\DiodeCore.cs" />
+    <Compile Include="src\DiodeBootProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\render\RenderManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="OpenTK">
@@ -74,6 +82,8 @@
       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
