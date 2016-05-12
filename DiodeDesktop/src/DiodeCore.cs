@@ -8,26 +8,24 @@ namespace DiodeDesktop
 {
     class DiodeCore : Game
     {
-        GraphicsDeviceManager graphics;
-        SpriteBatch spriteBatch;
         RenderManager renderManager;
+        GraphicsDeviceManager graphicsManager;
 
         public DiodeCore()
         {
-            graphics = new GraphicsDeviceManager(this);
+            graphicsManager = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }
 
         protected override void Initialize()
         {
-            renderManager = new RenderManager();
+            renderManager = new RenderManager(graphicsManager.GraphicsDevice);
             base.Initialize();
         }
 
-
         protected override void LoadContent()
         {
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+           
         }
 
 
@@ -47,6 +45,7 @@ namespace DiodeDesktop
 
         protected override void Draw(GameTime gameTime)
         {
+            renderManager.Render(gameTime);
             base.Draw(gameTime);
         }
     }
