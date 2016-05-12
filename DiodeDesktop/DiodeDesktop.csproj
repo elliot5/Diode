@@ -59,6 +59,7 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="src\input\KeyboardManager.cs" />
     <Compile Include="src\render\BlueprintCamera.cs" />
     <Compile Include="src\DiodeCore.cs" />
     <Compile Include="src\DiodeBootProgram.cs" />
@@ -102,6 +103,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\gate\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

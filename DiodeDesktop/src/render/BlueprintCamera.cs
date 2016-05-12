@@ -13,10 +13,12 @@ namespace DiodeDesktop.src
             _viewport = viewport;
             Rotation = 0;
             Zoom = 1;
+            Speed = 100;
             Origin = new Vector2(viewport.Width / 2f, viewport.Height / 2f);
             Position = Vector2.Zero;
         }
 
+        public float Speed { get; set; }
         public Vector2 Position { get; set; }
         public float Rotation { get; set; }
         public float Zoom { get; set; }
