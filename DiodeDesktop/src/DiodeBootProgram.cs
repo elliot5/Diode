@@ -5,6 +5,7 @@ namespace DiodeDesktop
 {
     public static class DiodeBootProgram
     {
+        //Create a runnable thread, and run Diode within the thread.
         [STAThread]
         static void Main()
         {

@@ -60,6 +60,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="src\input\KeyboardManager.cs" />
+    <Compile Include="src\input\MouseManager.cs" />
+    <Compile Include="src\logic\debug\DebugManager.cs" />
+    <Compile Include="src\logic\gate\GateProperties.cs" />
+    <Compile Include="src\logic\list\AndGate.cs" />
+    <Compile Include="src\logic\gate\LogicGate.cs" />
+    <Compile Include="src\logic\gate\GateManager.cs" />
+    <Compile Include="src\logic\list\LightComponent.cs" />
+    <Compile Include="src\logic\list\NotGate.cs" />
+    <Compile Include="src\logic\LogicManager.cs" />
+    <Compile Include="src\logic\node\LogicNode.cs" />
+    <Compile Include="src\logic\node\NodeManager.cs" />
+    <Compile Include="src\logic\node\NodeProperties.cs" />
+    <Compile Include="src\logic\wire\WireManager.cs" />
     <Compile Include="src\render\BlueprintCamera.cs" />
     <Compile Include="src\DiodeCore.cs" />
     <Compile Include="src\DiodeBootProgram.cs" />
@@ -103,9 +116,6 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\gate\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
